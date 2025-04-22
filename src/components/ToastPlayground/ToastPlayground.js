@@ -16,7 +16,11 @@ function ToastPlayground() {
         <h1>Toast Playground</h1>
       </header>
       {toastPopped && (
-        <Toast msg={textMsg} onDismiss={() => setToastPopped(false)} />
+        <Toast
+          msg={textMsg}
+          variant={selectedVariant}
+          onDismiss={() => setToastPopped(false)}
+        />
       )}
       <div className={styles.controlsWrapper}>
         <div className={styles.row}>
